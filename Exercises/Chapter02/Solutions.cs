@@ -50,7 +50,8 @@ namespace Exercises.Chapter2.Solutions
    {
       [TestCase(1.80, 77, ExpectedResult = 23.77)]
       [TestCase(1.60, 77, ExpectedResult = 30.08)]
-      public double CalculateBmi(double height, double weight)
+      [TestCase(1, 1, ExpectedResult = 1)]
+        public double CalculateBmi(double height, double weight)
          => Bmi.CalculateBmi(height, weight);
 
       [TestCase(23.77, ExpectedResult = BmiRange.Healthy)]
